@@ -2,9 +2,9 @@
 name = "processors"
 version = "0.1.0"
 authors = ["sebastian pfluegelmeier <pfluegelmeier.s@gmx.at>"]
-licence = "LGPL-3.0"
+license = "LGPL-3.0"
 repository = "https://github.com/sebastianpfluegelmeier/processors"
-descriptions = "Modular Audio Processors"
+description = "Modular Audio Processors"
 keywords = ["audio", "modular", "dsp", "synthesizer"]
 readme = "README.md"
 
