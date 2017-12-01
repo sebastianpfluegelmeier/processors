@@ -4,4 +4,4 @@ version = "0.1.0"
 authors = ["sebastian pfluegelmeier <pfluegelmeier.s@gmx.at>"]
 
 [dependencies]
-pcm-flow = "3.0"
+pcm-flow = "0.3.0"
