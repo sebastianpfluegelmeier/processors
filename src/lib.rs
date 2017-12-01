@@ -1,7 +1,8 @@
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn it_works() {
-        assert_eq!(2 + 2, 4);
-    }
-}
+pub mod distortion;
+pub mod utils;
+pub mod dynamics;
+pub mod filters;
+pub mod modulation;
+pub mod oscillators;
+pub mod delays;
+mod tests;
