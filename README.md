@@ -8,4 +8,5 @@ there are several modules containing Processors
 - filters
 - modulation
 - oscillators
+  - Sine
 - utils
