@@ -13,5 +13,5 @@ name = "processors"
 path = "./src/lib.rs"
 
 [dependencies]
-pcm-flow = "0.3.0"
+pcm-flow = "0.4.0"
 sample = "0.9.0"
