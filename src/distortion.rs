@@ -26,6 +26,12 @@ impl Processor<[f32; 1]> for AnalogClip {
     }
 }
 
+impl AnalogClip {
+    pub fn new() -> Self {
+        AnalogClip { }
+    }
+}
+
 pub struct DigitalClip {}
 
 impl Processor<[f32; 1]> for DigitalClip {
@@ -45,6 +51,12 @@ impl Processor<[f32; 1]> for DigitalClip {
     }
 }
 
+impl DigitalClip {
+    pub fn new() -> Self {
+        DigitalClip { }
+    }
+}
+
 pub struct HardCurve {}
 
 impl Processor<[f32; 1]> for HardCurve {
@@ -61,6 +73,12 @@ impl Processor<[f32; 1]> for HardCurve {
 
     fn inputs_amt(&self) -> usize {
         2
+    }
+}
+
+impl HardCurve {
+    pub fn new() -> Self {
+        HardCurve { }
     }
 }
 
@@ -102,6 +120,12 @@ impl Processor<[f32; 1]> for SawWave {
     }
 }
 
+impl SawWave {
+    pub fn new() -> Self {
+        SawWave { }
+    }
+}
+
 pub struct TriangleWave {}
 
 impl Processor<[f32; 1]> for TriangleWave {
@@ -118,6 +142,12 @@ impl Processor<[f32; 1]> for TriangleWave {
 
     fn inputs_amt(&self) -> usize {
         2
+    }
+}
+
+impl TriangleWave {
+    pub fn new() -> Self {
+        TriangleWave { }
     }
 }
 
@@ -138,5 +168,11 @@ impl Processor<[f32; 1]> for PulseWave {
 
     fn inputs_amt(&self) -> usize {
         2
+    }
+}
+
+impl PulseWave {
+    pub fn new() -> Self {
+        PulseWave { }
     }
 }
