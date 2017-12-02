@@ -55,3 +55,30 @@ impl Invert {
         Invert { }
     }
 }
+
+pub struct Constant {
+    value: f32
+}
+
+impl Processor<[f32; 1]> for Constant {
+    fn frame_process(&mut self,
+                     _: &FrameSet<[f32; 1]>,
+                     outputs: &mut FrameSet<[f32; 1]>) {
+        outputs[0][0] = self.value;
+    }
+    fn inputs_amt(&self) -> usize {
+        0
+    }
+
+    fn outputs_amt(&self) -> usize {
+        1
+    }
+}
+
+impl Constant {
+    pub fn new(value: f32) -> Self {
+        Constant {
+            value: value
+        }
+    }
+}
