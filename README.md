@@ -19,3 +19,6 @@ there are several modules containing Processors
   - Square
   - Tri
 - utils
+  - Invert
+  - Constant
+  - Mul
