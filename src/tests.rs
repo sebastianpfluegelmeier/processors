@@ -1,10 +1,9 @@
 #[cfg(test)]
 mod tests {
-
     extern crate pcm_flow;
 
     use super::super::oscillators::Sine;
-    use super::super::distortion::Hardclip;
+    use super::super::distortion::DigitalClip;
     use self::pcm_flow::graph::Graph;
     use self::pcm_flow::processor::Processor;
 
@@ -30,7 +29,7 @@ mod tests {
     #[test]
     fn dist_test() {
         let mut graph = Graph::new(10, 41000);
-        let hc_id = graph.add_processor(Box::new(Hardclip{}));
+        let hc_id = graph.add_processor(Box::new(DigitalClip{}));
         let sine_id = graph.add_processor(Box::new(Sine::new(1000)));
         graph.set_input_amt(1);
         graph.set_output_amt(1);

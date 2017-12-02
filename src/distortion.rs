@@ -6,6 +6,26 @@ use self::pcm_flow::graph::FrameSet;
 use std::f32;
 use std::f32::consts::PI;
 
+pub struct AnalogClip {}
+
+impl Processor<[f32; 1]> for AnalogClip {
+    fn frame_process(&mut self, 
+                     inputs: &FrameSet<[f32; 1]>,
+                     outputs: &mut FrameSet<[f32; 1]>) {
+        let sig = inputs[0][0];
+        let param = inputs[1][0];
+        outputs[0][0] = (2.0 / (1.0 + f32::exp(-param * sig)) - 1.0) / 
+                        (2.0 / (1.0 + f32::exp(-param)) - 1.0)
+    }
+    fn outputs_amt(&self) -> usize {
+        1
+    }
+
+    fn inputs_amt(&self) -> usize {
+        2
+    }
+}
+
 pub struct DigitalClip {}
 
 impl Processor<[f32; 1]> for DigitalClip {
